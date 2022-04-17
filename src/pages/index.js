@@ -14,7 +14,7 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <Hero
-          image={author.heroImage.gatsbyImageData}
+          image={author.featuredImage.gatsbyImageData}
           title={author.name}
           content={author.shortBio.shortBio}
         />
@@ -34,7 +34,7 @@ export const pageQuery = graphql`
         slug
         publishDate(formatString: "MMMM Do, YYYY")
         tags
-        heroImage {
+        featuredImage {
           gatsbyImageData(
             layout: FULL_WIDTH
             placeholder: BLURRED
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
           shortBio
         }
         title
-        heroImage: image {
+        featuredImage: image {
           gatsbyImageData(
             layout: CONSTRAINED
             placeholder: BLURRED
