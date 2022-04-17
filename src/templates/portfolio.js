@@ -6,7 +6,7 @@ import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import Tags from '../components/tags'
-import * as styles from './blog-post.module.css'
+import * as styles from './portfolio.module.css'
 
 class PortfolioTemplate extends React.Component {
   render() {
@@ -44,14 +44,14 @@ class PortfolioTemplate extends React.Component {
                 <ul className={styles.portfolioNavigation}>
                   {previous && (
                     <li>
-                      <Link to={`/blog/${previous.slug}`} rel="prev">
+                      <Link to={`/portfolio/${previous.slug}`} rel="prev">
                         ← {previous.title}
                       </Link>
                     </li>
                   )}
                   {next && (
                     <li>
-                      <Link to={`/blog/${next.slug}`} rel="next">
+                      <Link to={`/portfolio/${next.slug}`} rel="next">
                         {next.title} →
                       </Link>
                     </li>
